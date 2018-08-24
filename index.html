@@ -5,9 +5,10 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
           integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/main.min.css">
 </head>
-                                   <!--Баннер-->
+
 <body>
 <nav class="nav">
        <a class="nav__logo" href="https://s-pro.io/"> <img src="img/logo@2x.svg" alt="logo"></a>
@@ -65,13 +66,14 @@
                                     <!--Слайдер-->
 
 <section class="block-reviews">
+    <div class="block-reviews__element_grey"></div>
     <div class="single-item">
         <div class="block-reviews__slider">
-            <img src="img/slider2.jpg" />
+            <img src="img/slider2.jpg" alt="slide"/>
                 <div class="block-reviews__slider__content">
                     <div class="block-reviews__slider__content__container element1">
                         <div class="block-reviews__slider__content__img">
-                            <img src="img/Shape.png" />
+                            <img src="img/Shape.png" alt="shape"/>
                         </div>
                         <div class="block-reviews__slider__content__text">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -79,7 +81,7 @@
                                 nisi ut aliquip ex ea commodo consequat.</p>
                             <div class="block-reviews__slider__content__container element2">
                                 <div class="block-reviews__slider__content__img">
-                                    <img src="img/logo_dark.png" />
+                                    <img src="img/logo_dark.png" alt="logo"/>
                                 </div>
                                 <div class="block-reviews__slider__content__text">
                                     <p>Roy Rivera</p>
@@ -90,54 +92,63 @@
                     </div>
                 </div>
         </div>
-        <!--<div class="block-reviews__slider ">-->
-            <!--<img src="img/slider2.jpg" />-->
-            <!--<div class="block-reviews__slider__content">-->
-                <!--<div class="block-reviews__slider__content__container element1">-->
-                    <!--<div class="block-reviews__slider__content__img">-->
-                        <!--<img src="img/Shape.png" />-->
-                    <!--</div>-->
-                    <!--<div class="block-reviews__slider__content__text">-->
-                        <!--<p>Je obecně známou věcí, že člověk bývá při zkoumání grafického návrhu rozptylován okolním-->
-                            <!--textem, pokud mu dává nějaký smysl.Úkolem Lorem Ipsum je pak nahradit klasický smysluplný-->
-                            <!--text vhodnou bezvýznamovou alternativou s relativně běžným rozložením slov.</p>-->
-                        <!--<div class="block-reviews__slider__content__container element2">-->
-                            <!--<div class="block-reviews__slider__content__img">-->
-                                <!--<img src="img/logo_dark.png" />-->
-                            <!--</div>-->
-                            <!--<div class="block-reviews__slider__content__text">-->
-                                <!--<p>Roy Rivera</p>-->
-                                <!--<p>FrontEnd Developer S-PRO</p>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="block-reviews__slider ">-->
-            <!--<img src="img/slider2.jpg" />-->
-            <!--<div class="block-reviews__slider__content">-->
-                <!--<div class="block-reviews__slider__content__container element1">-->
-                    <!--<div class="block-reviews__slider__content__img">-->
-                        <!--<img src="img/Shape.png" />-->
-                    <!--</div>-->
-                    <!--<div class="block-reviews__slider__content__text">-->
-                        <!--<p>Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει,-->
-                            <!--όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem Ipsum είναι ότι έχει-->
-                            <!--λίγο-πολύ μία ομαλή κατανομή γραμμάτων, αντίθετα με το να .</p>-->
-                        <!--<div class="block-reviews__slider__content__container element2">-->
-                            <!--<div class="block-reviews__slider__content__img">-->
-                                <!--<img src="img/logo_dark.png" />-->
-                            <!--</div>-->
-                            <!--<div class="block-reviews__slider__content__text">-->
-                                <!--<p>Roy Rivera</p>-->
-                                <!--<p>FrontEnd Developer S-PRO</p>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+        <div class="block-reviews__slider ">
+            <img src="img/slider2.jpg" alt="slide"/>
+            <div class="block-reviews__slider__content">
+                <div class="block-reviews__slider__content__container element1">
+                    <div class="block-reviews__slider__content__img">
+                        <img src="img/Shape.png" alt="shape"/>
+                    </div>
+                    <div class="block-reviews__slider__content__text">
+                        <p>Je obecně známou věcí, že člověk bývá při zkoumání grafického návrhu rozptylován okolním
+                            textem, pokud mu dává nějaký smysl.Úkolem Lorem Ipsum je pak nahradit klasický smysluplný
+                            text vhodnou bezvýznamovou alternativou s relativně běžným rozložením slov.</p>
+                        <div class="block-reviews__slider__content__container element2">
+                            <div class="block-reviews__slider__content__img">
+                                <img src="img/logo_dark.png" alt="logo"/>
+                            </div>
+                            <div class="block-reviews__slider__content__text">
+                                <p>Roy Rivera</p>
+                                <p>FrontEnd Developer S-PRO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block-reviews__slider ">
+            <img src="img/slider2.jpg" alt="slide"/>
+            <div class="block-reviews__slider__content">
+                <div class="block-reviews__slider__content__container element1">
+                    <div class="block-reviews__slider__content__img">
+                        <img src="img/Shape.png" alt="shape"/>
+                    </div>
+                    <div class="block-reviews__slider__content__text">
+                        <p>Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει,
+                            όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem Ipsum είναι ότι έχει
+                            λίγο-πολύ μία ομαλή κατανομή γραμμάτων, αντίθετα με το να .</p>
+                        <div class="block-reviews__slider__content__container element2">
+                            <div class="block-reviews__slider__content__img">
+                                <img src="img/logo_dark.png" alt="logo"/>
+                            </div>
+                            <div class="block-reviews__slider__content__text">
+                                <p>Roy Rivera</p>
+                                <p>FrontEnd Developer S-PRO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider-arrow__container">
+    <div class="slider-arrow_right"></div>
+    <div class="slider-arrow_text">
+        <p class="first">1</p>
+        <p class="of">OF</p>
+        <p class="last">3</p>
+    </div>
+    <div class="slider-arrow_left"></div>
     </div>
 </section>
 
@@ -227,7 +238,7 @@
             </div>
             <div class="container center ">
                 <div class="content center_line">
-                        <img src="img/logp_light.png" />
+                        <img src="img/logo_light.png" alt="logo"/>
                     <p>2020</p>
                     <ul>
                         <li> Lorem ipsum dolor sit amet</li>
@@ -264,8 +275,12 @@
     <p>© 2018 S-PRO - All rights reserved</p>
 
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script  src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="slick/slick.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

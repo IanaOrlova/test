@@ -34,6 +34,7 @@ a{
 
 img{
   max-width: 100%;
+  margin: 0;
   display: block;
 }
 /********************************навигация************************************************/
@@ -68,10 +69,15 @@ img{
       padding-right: 0;
     }
   }
+
   .button{
     border: 2px solid #413281;
     color: #413281;
     padding: 22px 33px 18px 34px;
+    &:hover{
+      background: #413281;
+      color: white;
+    }
   }
 }
 /******************************************фон первой страницы************************************/
@@ -188,27 +194,40 @@ img{
 /********************************************слайдер*************************************/
 
 .block-reviews{
+
+  position: relative;
   margin-top: 20px;
   display: block;
-  .single-item{
-    //max-width: 30%;
-    //max-height: 363px;
+  .block-reviews__element_grey{
+    position: absolute;
+    top:28px;
+    z-index: 2;
+    right: 0;
+    border-top: 385px solid #f7f8fa;
+    border-left: 385px solid transparent;
+
   }
+  .single-item{
+    max-width: 91%;
+    position: relative;
+  }
+
   .block-reviews__slider{
     position: relative;
-    max-width: 91%;
     padding-top: 29px;
     img{
       width: 100%;
+
     }
   }
+
   .block-reviews__slider__content{
     position: absolute;
     top: 98px;
     left: 17.2%;
-    //right: 15%;
     color: white;
   }
+
   .block-reviews__slider__content__container.element1{
     display: flex;
     justify-content: center;
@@ -228,7 +247,7 @@ img{
   }
   .block-reviews__slider__content__container.element2 {
     display: flex;
-    padding-top: 41px;
+    padding-top: 40px;
     .block-reviews__slider__content__text {
       max-width: 151px;
       padding-left: 23px;
@@ -248,6 +267,58 @@ img{
         max-width: 72px;
       }
   }
+  .slider-arrow__container{
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    padding-left: 15px;
+    right: 10.6%;
+    .slider-arrow_text{
+      display: flex;
+    }
+
+  .slider-arrow_right{
+    width: 81px;
+    height: 49px;
+    background-color: #2998cc;
+    transform: skewX(46deg);
+  }
+  .slider-arrow_left{
+    width: 81px;
+    height: 49px;
+    background-color: #041132;
+    transform: skewX(46deg);
+  }
+  span{
+    color: white;
+  }
+  }
+  .slider-arrow_text{
+    color: white;
+    padding: 20px 24px 0 20px;
+    p{
+      font-family: Brown, sans-serif;
+      padding-right: 3px;
+      font-size: 12px;
+      color: rgb(255,255,255);
+    }
+  }
+}
+.arrow_right{
+  padding: 20px;
+  position: absolute;
+  z-index: 2;
+  bottom: -2px;
+  right: 30px;
+}
+.arrow_left{
+  padding: 20px;
+  position: absolute;
+  z-index: 2;
+  bottom: -2px;
+  right: 198px;
 }
 /********************************************список*********************************/
 
