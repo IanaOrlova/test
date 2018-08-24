@@ -36,7 +36,7 @@ img{
   max-width: 100%;
   display: block;
 }
-
+/********************************навигация************************************************/
 
 .nav{
   display: flex;
@@ -74,6 +74,7 @@ img{
     padding: 22px 33px 18px 34px;
   }
 }
+/******************************************фон первой страницы************************************/
 .banner {
   .banner-img {
     background: url("../img/bg.jpg") no-repeat center;
@@ -120,16 +121,25 @@ img{
       }
     }
   }
+  /************************************голубой блок с отсчетом времени***************************************/
   .data {
-    font-family: Brown, sans-serif;
-    font-weight: 700;
     position: absolute;
     right: 0;
-    top:435px;
-    background: #2998cc;
-    color: white;
+    top: 435px;
     padding-left: 169px;
     padding-right: 123px;
+    border-bottom: 209px solid #2998cc;
+    border-left: 192px solid transparent;
+    border-right: 141px solid #2998cc;
+  }
+  .data__text {
+    position: absolute;
+    right: 124px;
+    top: 435px;
+
+    font-family: Brown, sans-serif;
+    font-weight: 700;
+    color: white;
     p {
       font-size: 24px;
       text-transform: uppercase;
@@ -151,25 +161,27 @@ img{
       }
       .data__container-hours p {
         color: #d4eaf5;
-        padding-left: 39px;
+        padding-left: 43px;
       }
       .data__container-minutes p {
         color: #a9d6eb;
-        padding-left: 39px;
+        padding-left: 43px;
       }
       .data__container-seconds p {
         color: #7fc1e0;
-        padding-left: 39px;
+        padding-left: 43px;
       }
     }
   }
+/*************************************голубой элемент в верхнем левом углу*******************/
   .element_blue{
     position: absolute;
     top: 0;
-    background:rgba(41, 152, 204, 0.78);
-    height: 148px;
-    width: 116px;
     border-right: 50px solid transparent;
+    height: 0; width: 40px;
+    border-top: 142px solid rgba(41, 152, 204, 0.78);
+    border-right: 96px solid transparent;
+    border-left: 21px solid rgba(41, 152, 204, 0.78);
   }
 }
 
@@ -178,17 +190,23 @@ img{
 .block-reviews{
   margin-top: 20px;
   display: block;
+  .single-item{
+    //max-width: 30%;
+    //max-height: 363px;
+  }
   .block-reviews__slider{
     position: relative;
+    max-width: 91%;
+    padding-top: 29px;
     img{
       width: 100%;
     }
   }
   .block-reviews__slider__content{
     position: absolute;
-    top: 65px;
-    left: 21%;
-    right: 15%;
+    top: 98px;
+    left: 17.2%;
+    //right: 15%;
     color: white;
   }
   .block-reviews__slider__content__container.element1{
@@ -196,8 +214,8 @@ img{
     justify-content: center;
     max-width: 722px;
     .block-reviews__slider__content__text{
-      max-width: 533px;
-      padding-left: 46px;
+      max-width: 560px;
+      padding-left: 52px;
       p{
         font-family: Cera, sans-serif;
         color:  white;
@@ -210,7 +228,7 @@ img{
   }
   .block-reviews__slider__content__container.element2 {
     display: flex;
-    padding-top: 52px;
+    padding-top: 41px;
     .block-reviews__slider__content__text {
       max-width: 151px;
       padding-left: 23px;
@@ -230,16 +248,6 @@ img{
         max-width: 72px;
       }
   }
-  .block-reviews__element{
-    position: absolute;
-    max-width: 28%;
-    top: 0;
-    right: 0;
-    img{
-      display: block;
-      width: 100%;
-    }
-  }
 }
 /********************************************список*********************************/
 
@@ -248,67 +256,160 @@ img{
   text-align: center;
   position: relative;
   border-bottom: 1px solid #ebedf1;
-  p {
-    color: #f2f3f5;
-    font-size: 144px;
-    font-weight: 700;
-    letter-spacing: 8px;
-  }
-  .block-list__text_absolute {
-    position: absolute;
-    z-index: 2;
+  padding-top: 10px;
+
+  .block-list__text{
+    position: relative;
+    max-width: 760px;
     margin: 0 auto;
-    top: 56px;
-    left: 0;
-    right: 0;
-    max-width: 516px;
-    h3 {
-      color: #000221;
-      font-size: 32px;
+  }
+
+    p {
+      color: #f2f3f5;
+      font-size: 144px;
       font-weight: 700;
-      line-height: 40px;
-      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    .block-list__text_absolute {
+      position: absolute;
+      z-index: 2;
+      margin: 0 auto;
+      top: 50px;
+      left: 0;
+      right: 0;
+      max-width: 516px;
+
+      h3 {
+        color: #000221;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        text-transform: uppercase;
+      }
+    }
+
+    .block-list__parallelogram_absolute {
+      position: absolute;
+      top: 50px;
+      left: 115px;
+      z-index: 1;
+      width: 86px;
+      height: 40px;
+      background-color: #2998cc;
+      transform: skewX(139deg);
+    }
+
+  .block-list__container {
+    padding: 0 0 63px;
+    max-width: 1000px;
+    margin: 0 auto 0 ;
+    .container {
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+      .content {
+        padding-bottom: 12px;
+        position: relative;
+        max-width: 423px;
+        p {
+          font-family: Brown, sans-serif;
+          color: #2e3847;
+          font-size: 16px;
+          font-weight: 700;
+          text-align: left;
+          padding-bottom: 5px;
+          letter-spacing: 0;
+        }
+        li {
+          font-family: Cera, sans-serif;
+          color: #2e3847;
+          font-size: 14px;
+          font-weight: 400;
+          text-align: left;
+          line-height: 20px;
+        }
+      }
+      .first{
+        padding: 0 0 20px;
+      }
+      .fourth{
+        padding-top: 7px;
+      }
+      .sixth{
+        padding-top: 7px;
+      }
+    }
+    .content.center_line {
+
+      li{
+        padding-left: 15px;
+      }
+      img {
+        margin: 0 196px 0 176px;
+      }
+      p {
+        text-align: center;
+        color: #000221;
+        font-size: 24px;
+        padding-right: 23px;
+        padding-top: 16px;
+      }
+    }
+    .left_line ul{
+      padding-left: 57px;
+      li{
+        padding-left: 10px;
+      }
+    }
+    .left_line{
+      p{
+        padding-top: 10px;
+        padding-left: 31px;
+      }
+    }
+    .right_line {
+      li{
+        padding-left: 10px;
+      }
+      p{
+        padding-left: 12px;
+      }
+    }
+    }
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 51%;
+      padding-left: 84px;
+
+    }
+    .center {
+      left: 30%;
+      padding-top: 11px;
     }
   }
-  .block-list__parallelogram_absolute {
-    position: absolute;
-    top: 57px;
-    left: 416px;
-    z-index: 1;
-    width: 86px;
-    height: 40px;
-    background-color: #2998cc;
-    transform: skewX(130deg);
-  }
-  .block-list__container {
-    padding: 0 0 67px;
-    max-width: 1000px;
-    margin: -6px auto 0 ;
-  }
+
+  /************************таймлайн********************************/
+
+
   .timeline {
     position: relative;
-    max-width: 1200px;
     margin: 0 auto;
   }
-  /* The actual timeline (the vertical ruler) */
+
   .right > .content::before {
     content: '';
     position: absolute;
     width: 2px;
     background-color: #dde3eb;
-    top: 51px;
-    bottom: -8px;
-    right: 125%;
+    top: 34px;
+    bottom: -1px;
+    right: 122%;
   }
-  .right_line p::before {
-    content: '';
-    position: absolute;
-    top: 29px;
-    left: -80px;
-    width: 16%;
-    height: 2px;
-    background-color: #dde3eb;
-  }
+
   .left > .content::after {
     content: '';
     position: absolute;
@@ -316,50 +417,64 @@ img{
     background-color: #dde3eb;
     top: 51px;
     bottom: -8px;
-    left: 125%;
+    left: 118%;
   }
+
+/******************************линия после даты********************************/
+
+  .right_line p::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -80px;
+    width: 16%;
+    height: 2px;
+    background-color: #dde3eb;
+  }
+
+  .second.right_line p::before{
+    top: 6px;
+  }
+
   .left_line p::after {
     content: '';
     position: absolute;
-    top: 29px;
-    left: 80px;
-    width: 100%;
+    top: 16px;
+    left: 129px;
+    width: 82%;
     height: 3px;
     background-color: #dde3eb;
   }
-  /* Container around content */
-  .container {
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-    .center_line {
-      img {
-        margin: 0 196px 0 156px;
-      }
-      .content__img {
-        display: inline;
-        margin: 0 auto;
-        text-align: center;
-      }
-      p {
-        text-align: center;
-        font-family: Brown, sans-serif;
-        color: #000221;
-        font-size: 24px;
-        font-weight: 700;
-        padding-right: 40px;
-        padding-top: 16px;
-      }
-    }
+
+  .first.left_line p:after{
+    top: 17px;
   }
 
-  /* The circles on the timeline */
+  /********************************************** круги на тайм линии ***********************/
+
   .left::after {
     @include circle;
+    right: -9px;
+    top: 9px;
   }
+
   .right::after {
     @include circle;
+    left: -18px;
+    top: 9px;
   }
+
+  .first_dot::after{
+    right: -9px;
+    top: 10px;
+  }
+
+  .second_dot::after{
+    top: 0;
+  }
+
+/****************************************************ховер***********************************/
+
   .left:hover:after {
     background-color: #2998cc;
   }
@@ -384,58 +499,17 @@ img{
     p {
       color: #2998cc;
     }
-
   }
 
-  /* Place the container to the left */
-  .left {
-    left: 0;
-  }
 
-  /* Place the container to the right */
-  .right {
-    left: 50%;
-    padding-left: 103px;
-  }
-  .center {
-    left: 32%;
-  }
 
-  /* Fix the circle for containers on the right side */
-  .right::after {
-    left: -6px;
-  }
+  ///* Fix the circle for containers on the right side */
+  //.right::after {
+  //  left: -18px;
+  //}
 
   /* The actual content */
-  .content {
-    padding: 16px 0 ;
-    position: relative;
-    max-width: 400px;
 
-    p {
-      font-family: Brown, sans-serif;
-      color: #2e3847;
-      font-size: 16px;
-      font-weight: 700;
-      text-align: left;
-      padding-bottom: 5px;
-    }
-    li {
-      font-family: Cera, sans-serif;
-      color: #2e3847;
-      font-size: 14px;
-      font-weight: 400;
-      text-align: left;
-      line-height: 20px;
-    }
-  }
-}
-.left_line ul{
-  padding-left: 57px;
-  li{
-    padding-left: 10px;
-  }
-}
 //
 //  /* Media queries - Responsive timeline on screens less than 600px wide */
 //  @media screen and (max-width: 600px) {
@@ -476,11 +550,12 @@ img{
 
 .block-links{
   position: relative;
-  padding: 30px 123px;
+  padding: 30px 126px;
   text-align: center;
   .block-links-logo{
     position: absolute;
-    max-width: 115px;
+    max-width: 104px;
+    top: 34px;
   }
 ul{
   padding: 10px 0;
@@ -489,7 +564,7 @@ ul{
   li{
     list-style: none;
     display: inline;
-    padding-right: 20px;
+    padding-right: 23px;
     color: #9babb8;
     a{
       color: #9babb8;
