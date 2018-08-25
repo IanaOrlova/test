@@ -145,66 +145,68 @@ img{
   }
 
   /************************************голубой блок с отсчетом времени***************************************/
-  .data {
-    position: absolute;
-    right: 0;
-    top: 435px;
-    padding-left: 169px;
-    padding-right: 123px;
-    border-bottom: 209px solid #2998cc;
-    border-left: 192px solid transparent;
-    border-right: 141px solid #2998cc;
-  }
-
-  .data__text {
+  
+  .clock-container{
     @include font-face_first;
     color: white;
     position: absolute;
     right: 124px;
     top: 435px;
 
-    p {
+    h4{
       font-size: 24px;
       text-transform: uppercase;
       padding-top: 43px;
-      text-align: right;
+      text-align: right
     }
 
-    .data__container {
-      display: flex;
+  .clock{
+    display: flex;
+    font-size: 24px;
+
+    .column{
+      padding-left: 38px;
+    }
+
+    .text{
+      font-size: 11px;
       text-align: center;
-      padding-bottom: 35px;
+      padding-top: 27px;
+    }
 
-      p {
-        font-size: 11px;
-        text-align: center;
-        padding-top: 27px;
+    .timer{
+      text-align: center;
+      font-size: 48px;
+      padding-top: 10px;
+    }
+    .hours{
+      color: #d4eaf5;
+    }
 
-        &:last-child {
-          font-size: 48px;
-          padding-top: 10px;
-        }
+    .minutes{
+      color: #a9d6eb;
+    }
 
-      }
-
-      .data__container-hours p {
-        color: #d4eaf5;
-        padding-left: 43px;
-      }
-
-      .data__container-minutes p {
-        color: #a9d6eb;
-        padding-left: 43px;
-      }
-
-      .data__container-seconds p {
-        color: #7fc1e0;
-        padding-left: 43px;
-      }
-
+    .seconds{
+      color: #7fc1e0;
     }
 
   }
+
+}
+
+.data {
+  position: absolute;
+  right: 0;
+  top: 435px;
+  padding-left: 169px;
+  padding-right: 123px;
+  border-bottom: 209px solid #2998cc;
+  border-left: 192px solid transparent;
+  border-right: 141px solid #2998cc;
+}
+
+
 /*************************************голубой элемент в верхнем левом углу*******************/
   .element_blue{
     position: absolute;

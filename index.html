@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
           integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!--<link rel="stylesheet" href="downtime-timer-master/style.css">-->
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -39,24 +40,29 @@
         </div>
     </div>
     <div class="data"></div>
-    <div class="data__text">
-        <p>Title Block</p>
-        <div class="data__container">
-            <div class="data__container-days">
-                <p>DAYS</p>
-                <p>12</p>
+    <div class="clock-container">
+    <h4>Title Block</h4>
+        <div class="clock">
+
+            <div class="column days">
+                <div class="text">DAYS</div>
+                <div class="timer" id="days"></div>
             </div>
-            <div class="data__container-hours">
-                <p>HOURS</p>
-                <p>09</p>
+            <div class="timer days"></div>
+            <div class="column hours">
+                <div class="text">HOURS</div>
+                <div class="timer" id="hours"></div>
             </div>
-            <div class="data__container-minutes">
-                <p>MINUTES</p>
-                <p>45</p>
+            <div class="timer"></div>
+            <div class="column minutes">
+                <div class="text">MINUTES</div>
+                <div class="timer" id="minutes"></div>
             </div>
-            <div class="data__container-seconds">
-                <p>SECONDS</p>
-                <p>00</p>
+            <div class="timer"></div>
+            <div class="column seconds">
+                <div class="text">SECONDS</div>
+                <div class="timer" id="seconds"></div>
+
             </div>
         </div>
     </div>
@@ -275,11 +281,18 @@
     <p>© 2018 S-PRO - All rights reserved</p>
 
 </footer>
+
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.4/moment-timezone-with-data.js"></script>
+
+
 <script  src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="downtime-timer-master/timer.js"></script>
 <script src="slick/slick.min.js"></script>
 <script src="script.js"></script>
 </body>
