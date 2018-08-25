@@ -14,10 +14,18 @@
   position: absolute;
   width: 16px;
   height: 16px;
-
   background-color: #dde3eb;
-
   border-radius: 50%;
   z-index: 1;
+}
+
+@mixin font-face_first{
+  font-family: Brown,sans-serif;
+  font-weight: 700;
+}
+
+@mixin font-face_second{
+  font-family: Cera, sans-serif;
+  font-weight: 700;
 }
 

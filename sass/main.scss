@@ -47,23 +47,19 @@ img{
 
   .nav__list--button{
     display: flex;
-    flex-wrap:nowrap ;
-    justify-content: space-between;
   }
 
   .nav__logo{
-    padding-top: 14px;
-    padding-left: 5px;
+    padding: 14px 0 0 5px;
   }
 
   ul{
     padding: 19px 96px 0;
 
     li{
-      font-family: $font-face_first;
+      @include font-face_first;
       color:  #2e3847;
       font-size: 12px;
-      font-weight: 700;
       list-style: none;
       display: inline;
       text-transform: uppercase;
@@ -97,6 +93,7 @@ img{
     background: url("../img/bg.jpg") no-repeat center;
     background-size: cover;
     position: relative;
+    color: white;
 
     .banner-content__parallelogram-absolute{
       position: absolute;
@@ -116,11 +113,9 @@ img{
       padding: 219px 0 248px 216px;
 
       h2 {
-        font-family: $font-face_first;
+        @include font-face_first;
         text-transform: uppercase;
-        color: white;
         font-size: 44px;
-        font-weight: 700;
         padding-bottom: 42px;
       }
 
@@ -162,8 +157,7 @@ img{
   }
 
   .data__text {
-    font-family: $font-face_first;
-    font-weight: 700;
+    @include font-face_first;
     color: white;
     position: absolute;
     right: 124px;
@@ -216,7 +210,8 @@ img{
     position: absolute;
     top: 0;
     border-right: 50px solid transparent;
-    height: 0; width: 40px;
+    height: 0;
+    width: 40px;
     border-top: 142px solid rgba(41, 152, 204, 0.78);
     border-right: 96px solid transparent;
     border-left: 21px solid rgba(41, 152, 204, 0.78);
@@ -229,12 +224,13 @@ img{
   position: relative;
   margin-top: 20px;
   display: block;
+  @include font-face_second;
 
   .block-reviews__element_grey{
     position: absolute;
     top:28px;
-    z-index: 2;
     right: 0;
+    z-index: 2;
     border-top: 385px solid #f7f8fa;
     border-left: 385px solid transparent;
   }
@@ -250,7 +246,6 @@ img{
 
     img{
       width: 100%;
-
     }
 
   }
@@ -272,7 +267,6 @@ img{
       padding-left: 52px;
 
       p{
-        font-family: $font-face_second;
         color:  white;
         font-size: 16px;
         font-weight: 400;
@@ -293,7 +287,6 @@ img{
       padding-left: 23px;
 
       p{
-        font-family: $font-face_second;
         color:  white;
         font-size: 14px;
         font-weight: 400;
@@ -320,8 +313,8 @@ img{
     position: absolute;
     z-index: 1;
     bottom: 0;
-    padding-left: 15px;
     right: 10.6%;
+    padding-left: 15px;
 
     .slider-arrow_text{
       display: flex;
@@ -348,7 +341,6 @@ img{
     padding: 20px 24px 0 20px;
 
     p{
-      font-family:$font-face_first;
       padding-right: 3px;
       font-size: 12px;
       color: rgb(255,255,255);
@@ -376,7 +368,7 @@ img{
 /********************************************список*********************************/
 
 .block-list {
-  font-family: $font-face_first;
+  @include font-face_first;
   text-align: center;
   position: relative;
   border-bottom: 1px solid #ebedf1;
@@ -391,17 +383,16 @@ img{
   p {
     color: #f2f3f5;
     font-size: 144px;
-    font-weight: 700;
     letter-spacing: 4px;
   }
 
   .block-list__text_absolute {
     position: absolute;
-    z-index: 2;
-    margin: 0 auto;
     top: 50px;
     left: 0;
     right: 0;
+    z-index: 2;
+    margin: 0 auto;
     max-width: 516px;
 
     h3 {
@@ -438,20 +429,18 @@ img{
       .content {
         padding-bottom: 12px;
         position: relative;
-        //max-width: 423px;
 
         p {
-          font-family:$font-face_first;
-          color: #2e3847;
+          @include font-face_first;
           font-size: 16px;
-          font-weight: 700;
+          color: #2e3847;
           text-align: left;
           padding-bottom: 5px;
           letter-spacing: 0;
         }
 
         li {
-          font-family: $font-face_second;
+          @include font-face_second;
           color: #2e3847;
           font-size: 14px;
           font-weight: 400;
@@ -736,9 +725,9 @@ img{
 }
 
 .footer{
-  font-family: $font-face_second;
-  color:  rgba(0, 18, 51, 0.6);
+  @include font-face_second;
   font-size: 12px;
+  color:  rgba(0, 18, 51, 0.6);
   font-weight: 400;
   display: flex;
   justify-content: space-between;
@@ -747,7 +736,6 @@ img{
 
   .footer_links{
     display: flex;
-    justify-content: space-around;
 
     p {
       padding-right: 23px;
