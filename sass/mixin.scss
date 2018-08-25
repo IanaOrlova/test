@@ -1,14 +1,15 @@
 @mixin button{
-  font-family: Brown, sans-serif;
+  font-family: brownbold, sans-serif;
   outline: none;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   border-radius:6px ;
-  padding: 19px 37px;
+  //padding: 19px 37px;
   text-transform: uppercase;
   background: transparent;
 }
+
 @mixin circle{
   content: '';
   position: absolute;
@@ -20,12 +21,42 @@
 }
 
 @mixin font-face_first{
-  font-family: Brown,sans-serif;
+  font-family: brownbold, sans-serif;
   font-weight: 700;
 }
 
 @mixin font-face_second{
-  font-family: Cera, sans-serif;
+  font-family: cera_round_proregular, sans-serif;
   font-weight: 700;
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin space-between{
+justify-content: space-between;
+-webkit-box-pack: justify;
+-webkit-justify-content: space-between;
+-ms-flex-pack: justify;
+}
+
+@mixin align-content{
+align-content: space-around;
+-webkit-align-content: space-around;
+-ms-flex-line-pack: distribute;
+}
+
+
+@mixin row{
+  -webkit-flex-direction: row-reverse;
+  -moz-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  -o-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 

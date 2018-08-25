@@ -40,13 +40,14 @@ img{
 /********************************навигация************************************************/
 
 .nav{
-  display: flex;
+  @include flexbox;
+  @include space-between;
   padding: 18px 0 5px;
   margin: 0 123px;
-  justify-content: space-between;
+
 
   .nav__list--button{
-    display: flex;
+    @include flexbox;
   }
 
   .nav__logo{
@@ -54,7 +55,7 @@ img{
   }
 
   ul{
-    padding: 19px 96px 0;
+    padding: 19px 93px 0;
 
     li{
       @include font-face_first;
@@ -63,7 +64,7 @@ img{
       list-style: none;
       display: inline;
       text-transform: uppercase;
-      padding-right: 29px;
+      padding-left: 33px;
 
       &:last-child{
         padding-right: 0;
@@ -76,7 +77,7 @@ img{
   .button{
     border: 2px solid #413281;
     color: #413281;
-    padding: 22px 33px 18px 34px;
+    padding: 20px 36px 19px 34px;
 
     &:hover{
       background: #413281;
@@ -117,20 +118,21 @@ img{
         text-transform: uppercase;
         font-size: 44px;
         padding-bottom: 42px;
+        letter-spacing: 1px;
       }
 
       .button {
         border: 2px solid white;
         color: white;
-        margin-right: 25px;
-        padding: 19px 23px;
+        margin-right: 20px;
+        padding: 19px 26px;
 
         &:last-child {
           margin-right: 0;
         }
 
         &:nth-child(2) {
-          padding: 19px 45px;
+          padding: 19px 49px;
         }
 
         &:hover {
@@ -145,7 +147,7 @@ img{
   }
 
   /************************************голубой блок с отсчетом времени***************************************/
-  
+
   .clock-container{
     @include font-face_first;
     color: white;
@@ -161,8 +163,9 @@ img{
     }
 
   .clock{
-    display: flex;
+    @include flexbox;
     font-size: 24px;
+
 
     .column{
       padding-left: 38px;
@@ -177,8 +180,9 @@ img{
     .timer{
       text-align: center;
       font-size: 48px;
-      padding-top: 10px;
+      padding-top: 4px;
     }
+
     .hours{
       color: #d4eaf5;
     }
@@ -211,7 +215,6 @@ img{
   .element_blue{
     position: absolute;
     top: 0;
-    border-right: 50px solid transparent;
     height: 0;
     width: 40px;
     border-top: 142px solid rgba(41, 152, 204, 0.78);
@@ -223,10 +226,10 @@ img{
 /********************************************слайдер*************************************/
 
 .block-reviews{
+  @include font-face_second;
   position: relative;
   margin-top: 20px;
   display: block;
-  @include font-face_second;
 
   .block-reviews__element_grey{
     position: absolute;
@@ -254,18 +257,20 @@ img{
 
   .block-reviews__slider__content{
     position: absolute;
-    top: 98px;
-    left: 17.2%;
+    top: 94px;
+    left: 17.6%;
     color: white;
   }
 
   .block-reviews__slider__content__container.element1{
-    display: flex;
+    @include flexbox;
     justify-content: center;
     max-width: 722px;
 
+
+
     .block-reviews__slider__content__text{
-      max-width: 560px;
+      max-width: 612px;
       padding-left: 52px;
 
       p{
@@ -281,18 +286,19 @@ img{
   }
 
   .block-reviews__slider__content__container.element2 {
-    display: flex;
+    @include flexbox;
     padding-top: 40px;
 
     .block-reviews__slider__content__text {
-      max-width: 151px;
-      padding-left: 23px;
+      max-width: 161px;
+      padding-left: 31px;
+      padding-top: 7px;
 
       p{
         color:  white;
         font-size: 14px;
         font-weight: 400;
-        line-height: 24px;
+        line-height: 22px;
         text-align: left;
 
         &:last-child{
@@ -310,8 +316,8 @@ img{
   }
 
   .slider-arrow__container{
-    display: flex;
-    flex-direction: row-reverse;
+    @include flexbox;
+    @include row;
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -319,7 +325,7 @@ img{
     padding-left: 15px;
 
     .slider-arrow_text{
-      display: flex;
+      @include flexbox;
     }
 
     .slider-arrow_right{
@@ -390,12 +396,13 @@ img{
 
   .block-list__text_absolute {
     position: absolute;
-    top: 50px;
+    top: 47px;
     left: 0;
     right: 0;
     z-index: 2;
     margin: 0 auto;
     max-width: 516px;
+    letter-spacing: 1px;
 
     h3 {
       color: #000221;
@@ -419,8 +426,8 @@ img{
   }
 
   .block-list__container {
-    padding: 0 0 63px;
-    max-width: 1000px;
+    padding: 0 0 61px;
+    max-width: 1030px;
     margin: 0 auto 0;
 
     .container {
@@ -466,39 +473,38 @@ img{
       li {
         padding-left: 15px;
 
+
       }
 
       img {
-        margin: 0 196px 0 176px;
+        margin: 0 196px 0 173px;
       }
 
       p {
         text-align: right;
-        padding-right: 14px;
-        color: #000221;
         font-size: 24px;
-        padding-top: 16px;
+        color: #000221;
+        padding: 13px 23px 10px 0;
+
       }
     }
 
     .left_line {
 
       ul {
-        padding-left: 57px;
+        padding-left: 77px;
         padding-bottom: 7px;
         border-right: 2px dashed #dde3eb;
 
-
         li {
-          max-width: 423px;
-          padding-left: 10px;
+          padding-left: 7px;
         }
 
       }
 
       p {
         padding-top: 10px;
-        padding-left: 31px;
+        padding-left: 47px;
       }
 
     }
@@ -514,7 +520,7 @@ img{
       }
 
       p {
-        padding-left: 109px;
+        padding-left: 112px;
       }
 
     }
@@ -529,8 +535,8 @@ img{
 
   }
   .center {
-    left: 30%;
-    max-width: 240px;
+    left: 31%;
+    max-width: 245px;
   }
 
   /************************таймлайн********************************/
@@ -701,13 +707,11 @@ img{
 
   .block-links-logo{
     position: absolute;
-    max-width: 104px;
-    top: 34px;
+    top: 32px;
   }
 
   ul{
     padding: 10px 0;
-    align-self:center;
 
       li{
         list-style: none;
@@ -731,13 +735,13 @@ img{
   font-size: 12px;
   color:  rgba(0, 18, 51, 0.6);
   font-weight: 400;
-  display: flex;
-  justify-content: space-between;
+  @include flexbox;
+  @include space-between;
   background: #f7f8fa;
   padding: 37px 123px;
 
   .footer_links{
-    display: flex;
+    @include flexbox;
 
     p {
       padding-right: 23px;
