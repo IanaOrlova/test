@@ -39,6 +39,7 @@ img{
 }
 /********************************навигация************************************************/
 
+
 .nav{
   @include flexbox;
   @include space-between;
@@ -228,12 +229,12 @@ img{
 .block-reviews{
   @include font-face_second;
   position: relative;
-  margin-top: 20px;
+  margin-top: 49px;
   display: block;
 
   .block-reviews__element_grey{
     position: absolute;
-    top:28px;
+    top:-2px;
     right: 0;
     z-index: 2;
     border-top: 385px solid #f7f8fa;
@@ -247,7 +248,7 @@ img{
 
   .block-reviews__slider{
     position: relative;
-    padding-top: 29px;
+    //padding-top: 29px;
 
     img{
       width: 100%;
@@ -757,4 +758,211 @@ img{
   }
 }
 
+/*************************************адаптив*****************************************/
+
+
+@media (max-width: 1250px) {
+
+  div.block-reviews__slider{
+
+    div.block-reviews__slider__content{
+      top: 30px;
+      left: 100px;
+
+    }
+
+  }
+
+  .block-reviews__element_grey{
+    display: none;
+  }
+
+  section.block-reviews{
+    background: #01021b;
+  }
+
+  div.block-reviews__slider{
+    background: #01021b;
+
+  }
+
+}
+
+
+@media (max-width: 1070px) {
+
+  .nav__list--button{
+
+    ul{
+      padding: 19px 40px 0 0;
+    }
+
+  }
+
+    .timeline{
+
+      .container{
+        padding-bottom: 30px;
+      }
+
+      .left {
+        left:25%;
+
+        .left_line{
+
+          ul{
+            padding-left: 0;
+            padding-right: 20px;
+          }
+
+          P{
+            padding-left: 0;
+          }
+
+        }
+
+        .left_line p::after {
+          content: '';
+          position: absolute;
+          top: 16px;
+          left: 90px;
+          width: 77%;
+          height: 2px;
+          background-color: #dde3eb;
+        }
+
+      }
+
+      .right {
+        left: 25%;
+
+        .right_line{
+
+          ul{
+            padding-left: 0;
+            border-left: none;
+            border-right: 2px dashed #dde3eb ;
+            padding-right: 20px;
+          }
+
+          P{
+            padding-left: 0;
+          }
+        }
+
+        .right_line p::before {
+          content: none;
+        }
+
+        .right_line p::after {
+          content: '';
+          position: absolute;
+          top: 8px;
+          left: 90px;
+          width: 77%;
+          height: 2px;
+          background-color: #dde3eb;
+        }
+
+      }
+      .right > .content ul:hover {
+        border-right: 2px solid #2998cc;
+        border-left: none;
+      }
+
+      .right::after {
+        content: none;
+        left: 472px;
+        top: 0;
+      }
+
+      .right::before {
+        @include circle;
+        right: -8px;
+        top: 0;
+      }
+
+      .center {
+        left: 25%;
+        max-width: 245px;
+
+        .center_line{
+
+          ul{
+            padding-left: 0;
+          }
+
+        }
+
+      }
+
+    }
+
+}
+
+@media (max-width: 970px){
+  .block-reviews{
+    display: none;
+  }
+
+}
+
+@media (max-width: 750px){
+
+  .block-list__text{
+
+    p{
+      display: none;
+    }
+
+    .block-list__text_absolute{
+      position: static;
+
+    }
+
+  }
+
+  .block-links{
+    padding-right: 40px ;
+    padding-left: 40px;
+    .block-links-logo{
+      display: none;
+    }
+  }
+
+  .footer{
+    padding-right: 40px;
+    padding-left: 40px;
+
+    .footer_links{
+      display: block;
+
+      p{
+        padding-bottom: 20px;
+      }
+
+    }
+
+  }
+  .right{
+
+    .right_line p::after {
+      content: none;
+    }
+
+  }
+
+
+  .block-list__parallelogram_absolute{
+    display: none;
+  }
+
+  //.banner-img{
+  //                                                  //НЕ РАБОТАЕТ
+  //    div.banner-content__text{
+  //      padding: 157px 0 248px 77px;
+  //    }
+  //}
+
+}
 
