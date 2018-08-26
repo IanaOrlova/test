@@ -65,7 +65,7 @@ img{
 .nav{
   @include flexbox;
   @include space-between;
-  padding: 18px 0 5px;
+  padding: 18px 0 2px;
   margin: 0 123px;
 
 
@@ -134,7 +134,7 @@ img{
       position: relative;
       z-index: 2;
       text-align: left;
-      padding: 219px 0 248px 216px;
+      padding: 219px 0 251px 216px;
 
       h2 {
         @include font-face_first;
