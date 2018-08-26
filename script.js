@@ -1,9 +1,15 @@
 $(document).ready(function(){
+
     $('.single-item').slick({
         prevArrow: '<img class="arrow_right" src="img/arrow_right.png"/>',
         nextArrow: '<img class="arrow_left" src="img/arrow_left.png"/>',
-
-        // respondTo:$slides,
     });
+
+    $('.menu-button').click(function (e) {
+        var target = e.target;
+        var menuId = $(target).data('menu-id');
+        $(menuId).toggle();
+    });
+
 
 });

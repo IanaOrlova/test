@@ -15,13 +15,19 @@
        <a class="nav__logo" href="https://s-pro.io/"> <img src="img/logo@2x.svg" alt="logo"></a>
     <div class="nav__list--button">
         <div class="nav__list">
-            <ul>
+            <ul id="top-menu">
                 <li><a href="#">item 1</a> </li>
                 <li><a href="#">item 2</a></li>
                 <li><a href="#">item 3</a></li>
                 <li><a href="#">item 4</a></li>
                 <li><a href="#">item 5</a></li>
             </ul>
+            <button class="menu-button" data-menu-id="#top-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         <button class="nav_button button">button text</button>
     </div>
@@ -29,7 +35,7 @@
 </nav>
 <section class="banner">
     <div class="banner-img">
-      <div class="banner-content__text">
+      <div class="banner-content__text" id="text">
           <h2>Virginia Travel For Kids</h2>
           <div class="banner-content__text__button-holder">
               <button class="banner-content__text__button-holder button" ><i class="fas fa-cloud-download-alt"></i> Button text</button>

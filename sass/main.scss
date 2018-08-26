@@ -39,6 +39,28 @@ img{
 }
 /********************************навигация************************************************/
 
+.menu-button {
+  display: none;
+  width: 60px;
+  padding: 7px 0;
+  border: 1px solid #2998cc;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: inline-block;
+  height: 1px;
+  background-color: #2998cc;
+  margin: 5px 0;
+  width: 80%;
+  font-size: 0;
+  line-height: 0;
+}
+
 
 .nav{
   @include flexbox;
@@ -92,7 +114,7 @@ img{
 .banner {
 
   .banner-img {
-    background: url("../img/bg.jpg") no-repeat center;
+    background-image: url("../img/bg.jpg") ;
     background-size: cover;
     position: relative;
     color: white;
@@ -788,7 +810,6 @@ img{
 
 }
 
-
 @media (max-width: 1070px) {
 
   .nav__list--button{
@@ -821,14 +842,8 @@ img{
 
         }
 
-        .left_line p::after {
-          content: '';
-          position: absolute;
-          top: 16px;
-          left: 90px;
-          width: 77%;
-          height: 2px;
-          background-color: #dde3eb;
+        .left_line p::after{
+          content: none;
         }
 
       }
@@ -854,20 +869,14 @@ img{
           content: none;
         }
 
-        .right_line p::after {
-          content: '';
-          position: absolute;
-          top: 8px;
-          left: 90px;
-          width: 77%;
-          height: 2px;
-          background-color: #dde3eb;
-        }
-
       }
       .right > .content ul:hover {
         border-right: 2px solid #2998cc;
         border-left: none;
+      }
+
+      .right:hover:before {
+        background-color: #2998cc;
       }
 
       .right::after {
@@ -901,13 +910,72 @@ img{
 }
 
 @media (max-width: 970px){
+
   .block-reviews{
+    display: none;
+  }
+
+  .nav__list--button{
+    flex-direction: row-reverse;
+  }
+
+  .button{
+    margin-right: 40px;
+  }
+
+  .menu-button {
+    display: inline-block;
+  }
+
+  .nav {
+  position: relative;
+  display: flex;
+  margin: 0 ;
+  }
+
+  nav ul {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 92px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  background-color: rgba(120, 173, 212, 0.72);
+ }
+
+ #top-menu li {
+  display: block;
+  margin: 15px 0;
+  padding: 0;
+
+   a{
+     color: white;
+     font-size: 16px;
+   }
+
+  }
+
+  nav ul li span {
+  display: none;
+  }
+
+  #text{
+    padding: 198px 0 248px 77px;
+  }
+
+  .banner-content__parallelogram-absolute{
+    display: none;
+  }
+
+  .element_blue{
     display: none;
   }
 
 }
 
-@media (max-width: 750px){
+@media all and (max-width: 750px){
 
   .block-list__text{
 
@@ -925,9 +993,14 @@ img{
   .block-links{
     padding-right: 40px ;
     padding-left: 40px;
+
     .block-links-logo{
       display: none;
     }
+  }
+
+  #text{
+    padding: 198px 0 248px 10px;
   }
 
   .footer{
@@ -938,31 +1011,52 @@ img{
       display: block;
 
       p{
-        padding-bottom: 20px;
+        padding-bottom: 21px;
       }
 
     }
 
   }
-  .right{
-
-    .right_line p::after {
-      content: none;
-    }
-
-  }
-
 
   .block-list__parallelogram_absolute{
     display: none;
   }
 
-  //.banner-img{
-  //                                                  //НЕ РАБОТАЕТ
-  //    div.banner-content__text{
-  //      padding: 157px 0 248px 77px;
-  //    }
-  //}
+}
 
+@media all and (max-width: 620px){
+
+  #text{
+    padding: 198px 0 248px 10px;
+  }
+
+  .button{
+    margin-bottom: 20px;
+  }
+
+  .data{
+    display: none;
+  }
+
+  .banner .clock-container{
+    right: 12px;
+    top: 528px;
+
+  }
+
+}
+
+@media all and (max-width: 460px){
+
+  .banner .clock-container{
+    top: 667px;
+
+  }
+
+  .block-links{
+    i{
+      margin-top: 15px;
+    }
+  }
 }
 
