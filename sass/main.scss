@@ -121,8 +121,8 @@ img{
 
     .banner-content__parallelogram-absolute{
       position: absolute;
-      top: 217px;
-      left: 189px;
+      top: 221px;
+      left: 192px;
       z-index: 1;
       background-color: rgba(120, 173, 212, 0.72);
       width: 119px;
@@ -134,7 +134,7 @@ img{
       position: relative;
       z-index: 2;
       text-align: left;
-      padding: 219px 0 251px 216px;
+      padding: 223px 0 249px 216px;
 
       h2 {
         @include font-face_first;
@@ -251,7 +251,7 @@ img{
 .block-reviews{
   @include font-face_second;
   position: relative;
-  margin-top: 49px;
+  margin-top: 48px;
   display: block;
 
   .block-reviews__element_grey{
@@ -259,8 +259,8 @@ img{
     top:-2px;
     right: 0;
     z-index: 2;
-    border-top: 385px solid #f7f8fa;
-    border-left: 385px solid transparent;
+    border-top: 391px solid #f7f8fa;
+    border-left: 392px solid transparent;
   }
 
   .single-item{
@@ -280,7 +280,7 @@ img{
 
   .block-reviews__slider__content{
     position: absolute;
-    top: 94px;
+    top: 67px;
     left: 17.6%;
     color: white;
   }
@@ -403,7 +403,7 @@ img{
   text-align: center;
   position: relative;
   border-bottom: 1px solid #ebedf1;
-  padding-top: 10px;
+  //padding-top: 10px;
 
   .block-list__text {
     position: relative;
@@ -414,12 +414,13 @@ img{
   p {
     color: #f2f3f5;
     font-size: 144px;
-    letter-spacing: 4px;
+    letter-spacing: 7px;
+    margin: 0;
   }
 
   .block-list__text_absolute {
     position: absolute;
-    top: 47px;
+    top: 56px;
     left: 0;
     right: 0;
     z-index: 2;
@@ -433,13 +434,14 @@ img{
       font-weight: 700;
       line-height: 40px;
       text-transform: uppercase;
+
     }
 
   }
 
   .block-list__parallelogram_absolute {
     position: absolute;
-    top: 50px;
+    top: 60px;
     left: 115px;
     z-index: 1;
     width: 86px;
@@ -449,7 +451,7 @@ img{
   }
 
   .block-list__container {
-    padding: 0 0 61px;
+    padding: 10px 0 61px;;
     max-width: 1030px;
     margin: 0 auto 0;
 
@@ -516,6 +518,7 @@ img{
 
       ul {
         padding-left: 77px;
+        padding-right: 45px;
         padding-bottom: 7px;
         border-right: 2px dashed #dde3eb;
 
@@ -609,8 +612,8 @@ img{
     content: '';
     position: absolute;
     top: 16px;
-    left: 129px;
-    width: 69%;
+    left: 143px;
+    width: 68%;
     height: 2px;
     background-color: #dde3eb;
   }
