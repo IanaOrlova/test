@@ -135,7 +135,7 @@ position: relative;
 
     .banner__parallelogram_absolute{
       position: absolute;
-      top: 35%;
+      top: 36%;
       left: 14%;
       background-color: rgba(120, 173, 212, 0.72);
       width: 119px;
@@ -153,7 +153,7 @@ position: relative;
         @include font-face_first;
         text-transform: uppercase;
         font-size: 44px;
-        padding-bottom: 42px;
+        padding-bottom: 44px;
         letter-spacing: 1px;
       }
 
@@ -188,7 +188,7 @@ position: relative;
     @include font-face_first;
     color: white;
     position: absolute;
-    left: -55px;
+    left: -67px;
 
 
 
@@ -204,7 +204,7 @@ position: relative;
         font-size: 24px;
 
         .column {
-          padding-left: 38px;
+          padding-left: 39px;
 
           .text {
             font-size: 11px;
@@ -228,6 +228,7 @@ position: relative;
 
           .seconds {
             color: #7fc1e0;
+            min-width: 98px;
           }
 
 
@@ -238,13 +239,11 @@ position: relative;
   &__clock_background {
     position: absolute;
     right: 0;
-    bottom: 51px;
+    bottom: 52px;
     border-bottom: 210px solid #2998cc;
-    border-left: 189px solid transparent;
-    border-right: 433px solid #2998cc
+    border-left: 193px solid transparent;
+    border-right: 434px solid #2998cc;
   }
-
-/*************************************голубой элемент в верхнем левом углу*******************/
 
 }
 
@@ -253,7 +252,7 @@ position: relative;
 .block-reviews{
   @include font-face_second;
   position: relative;
-  margin-top: 48px;
+  margin-top: 47px;
   display: block;
 
   &__element_grey{
@@ -383,6 +382,7 @@ position: relative;
   z-index: 2;
   bottom: -2px;
   right: 30px;
+  cursor: pointer;
 }
 
 .img__arrow_left{
@@ -391,6 +391,7 @@ position: relative;
   z-index: 2;
   bottom: -2px;
   right: 198px;
+  cursor: pointer;
 }
 /********************************************список*********************************/
 
@@ -660,6 +661,7 @@ position: relative;
 
           a{
             color: #9babb8;
+            display: inline-block;
           }
 
         &:last-child{
@@ -873,7 +875,7 @@ position: relative;
     padding: 25% 0 36% 7%;
   }
 
-  
+
   .block-reviews{
     display: none;
   }
