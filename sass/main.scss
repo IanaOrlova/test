@@ -45,6 +45,18 @@ img{
   padding: 18px 0 2px;
   margin: 0 123px;
 
+  &__element_blue{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 40px;
+    border-top: 142px solid rgba(41, 152, 204, 0.78);
+    border-right: 96px solid transparent;
+    border-left: 21px solid rgba(41, 152, 204, 0.78);
+  }
+
   &__section_right{
     display: flex;
 
@@ -114,17 +126,17 @@ img{
 
 .banner {
 
+position: relative;
   &_background {
     background-image: url("../img/bg.jpg") ;
     background-size: cover;
     position: relative;
     color: white;
 
-    .banner-content__parallelogram-absolute{
+    .banner__parallelogram_absolute{
       position: absolute;
-      top: 221px;
-      left: 192px;
-      z-index: 1;
+      top: 35%;
+      left: 14%;
       background-color: rgba(120, 173, 212, 0.72);
       width: 119px;
       height: 56px;
@@ -135,7 +147,7 @@ img{
       position: relative;
       z-index: 2;
       text-align: left;
-      padding: 223px 0 249px 216px;
+      padding: 16% 0 18.5% 15.9%;;
 
       h2 {
         @include font-face_first;
@@ -176,8 +188,9 @@ img{
     @include font-face_first;
     color: white;
     position: absolute;
-    right: 124px;
-    top: 435px;
+    left: -55px;
+
+
 
     h4{
       font-size: 24px;
@@ -225,24 +238,14 @@ img{
   &__clock_background {
     position: absolute;
     right: 0;
-    top: 435px;
-    padding-left: 169px;
-    padding-right: 123px;
-    border-bottom: 209px solid #2998cc;
-    border-left: 192px solid transparent;
-    border-right: 141px solid #2998cc;
+    bottom: 51px;
+    border-bottom: 210px solid #2998cc;
+    border-left: 189px solid transparent;
+    border-right: 433px solid #2998cc
   }
 
 /*************************************голубой элемент в верхнем левом углу*******************/
-  &__element_blue{
-    position: absolute;
-    top: 0;
-    height: 0;
-    width: 40px;
-    border-top: 142px solid rgba(41, 152, 204, 0.78);
-    border-right: 96px solid transparent;
-    border-left: 21px solid rgba(41, 152, 204, 0.78);
-  }
+
 }
 
 /********************************************слайдер*************************************/
@@ -697,6 +700,9 @@ img{
 
 
 @media (max-width: 1300px) {
+  #text{
+  padding: 15% 0 36% 12%;
+  }
 
   section.block-reviews{
     background: #01021b;
@@ -720,6 +726,10 @@ img{
 }
 
 @media (max-width: 1070px) {
+
+  #text{
+    padding: 25% 0 36% 12%;
+  }
 
   .nav {
     position: relative;
@@ -760,110 +770,110 @@ img{
 
   }
 
-    .block-timeline__timeline{
+  .banner__parallelogram_absolute{
+    display: none;
+  }
 
-      .container{
-        padding-bottom: 30px;
-      }
+  .block-timeline__timeline{
 
-      .block-timeline__timeline__container_left {
-        left:25%;
+    .container{
+      padding-bottom: 30px;
+    }
 
-        .block-timeline__timeline__content_left{
+    .block-timeline__timeline__container_left {
+      left:25%;
 
-          ul{
-            padding-left: 0;
-            padding-right: 20px;
-          }
+      .block-timeline__timeline__content_left{
 
-          P{
-            padding-left: 0;
-            &::after{
-              content: none;
-            }
-          }
-
+        ul{
+          padding-left: 0;
+          padding-right: 20px;
         }
 
-      }
-
-      .block-timeline__timeline__container_right {
-        left: 25%;
-
-        &:after {
-          content: none;
-          left: 472px;
-          top: 0;
-        }
-
-        &:hover:before {
-          background-color: #2998cc;
-        }
-
-        &::before {
-          @include circle;
-          right: -8px;
-          top: 0;
-        }
-
-        .block-timeline__timeline__content_right{
-
-          ul{
-            padding-left: 0;
-            border-left: none;
-            border-right: 2px dashed #dde3eb ;
-            padding-right: 20px;
+        P{
+          padding-left: 0;
+          &::after{
+            content: none;
           }
-
-          P{
-            padding-left: 0;
-            &::before {
-              content: none;
-            }
-          }
-        }
-
-
-
-      }
-      .block-timeline__timeline__container_right > .content ul:hover {
-        border-right: 2px solid #2998cc;
-        border-left: none;
-      }
-
-
-      .block-timeline__timeline__container_center {
-        left: 25%;
-        max-width: 245px;
-
-        .block-timeline__timeline__content_center{
-
-          ul{
-            padding-left: 0;
-          }
-
         }
 
       }
 
     }
 
+    .block-timeline__timeline__container_right {
+      left: 25%;
+
+      &:after {
+        content: none;
+
+      }
+
+      &:hover:before {
+        background-color: #2998cc;
+      }
+
+      &::before {
+        @include circle;
+        right: -8px;
+        top: 0;
+      }
+
+      .block-timeline__timeline__content_right{
+
+        ul{
+          padding-left: 0;
+          border-left: none;
+          border-right: 2px dashed #dde3eb ;
+          padding-right: 20px;
+        }
+
+        P{
+          padding-left: 0;
+          &::before {
+            content: none;
+          }
+        }
+      }
+
+
+
+    }
+    .block-timeline__timeline__container_right > .content ul:hover {
+      border-right: 2px solid #2998cc;
+      border-left: none;
+    }
+
+
+    .block-timeline__timeline__container_center {
+      left: 25%;
+      max-width: 245px;
+
+      .block-timeline__timeline__content_center{
+
+        ul{
+          padding-left: 0;
+        }
+
+      }
+
+    }
+
+  }
+
 }
 
 @media (max-width: 970px){
 
+  .nav__element_blue{
+    display: none;
+  }
+
   #text{
-    padding: 198px 0 248px 77px;
+    padding: 25% 0 36% 7%;
   }
 
-  .banner-content__parallelogram-absolute{
-    display: none;
-  }
-
-  .banner__element_blue{
-    display: none;
-  }
-
+  
   .block-reviews{
     display: none;
   }
@@ -872,7 +882,7 @@ img{
 @media all and (max-width: 750px){
 
   #text{
-    padding: 198px 0 248px 10px;
+    padding: 30% 0 43% 7%;
   }
 
   .block-timeline__text_top{
@@ -921,7 +931,7 @@ img{
 
 }
 
-@media all and (max-width: 620px){
+@media  (max-width: 620px){
 
   #text{
     padding: 198px 0 248px 10px;
@@ -931,13 +941,11 @@ img{
     margin-bottom: 20px;
   }
 
-  .banner__clock_background{
-    display: none;
-  }
+
 
   .banner .clock-container{
-    right: 12px;
-    top: 528px;
+    left: 0;
+
 
   }
 
@@ -945,9 +953,8 @@ img{
 
 @media all and (max-width: 460px){
 
-  .banner .clock-container{
-    top: 667px;
-
+  .banner__clock_background{
+    display: none;
   }
 
   .block-links{
