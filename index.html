@@ -13,7 +13,7 @@
 <body>
 <nav class="nav">
        <a class="nav__logo" href="https://s-pro.io/"> <img src="img/logo@2x.svg" alt="logo"></a>
-    <div class="nav__list--button">
+    <div class="nav__section_right">
         <div class="nav__list">
             <ul id="top-menu">
                 <li><a href="#">item 1</a> </li>
@@ -22,50 +22,46 @@
                 <li><a href="#">item 4</a></li>
                 <li><a href="#">item 5</a></li>
             </ul>
-            <button class="menu-button" data-menu-id="#top-menu">
+            <button class="menu__button" data-menu-id="#top-menu">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
-        <button class="nav_button button">button text</button>
+        <button class="nav__button button">button text</button>
     </div>
 
 </nav>
 <section class="banner">
-    <div class="banner-img">
+    <div class="banner_background">
       <div class="banner-content__text" id="text">
           <h2>Virginia Travel For Kids</h2>
-          <div class="banner-content__text__button-holder">
-              <button class="banner-content__text__button-holder button" ><i class="fas fa-cloud-download-alt"></i> Button text</button>
-              <button class="banner-content__text__button-holder button" ><i class="fas fa-cloud-download-alt"></i> Button text</button>
-              <button class="banner-content__text__button-holder button" ><i class="fas fa-video"></i> Watch video</button>
+          <div class="banner-content__button-holder">
+              <button class="banner__ button button" ><i class="fas fa-cloud-download-alt"></i> Button text</button>
+              <button class="banner__ button button" ><i class="fas fa-cloud-download-alt"></i> Button text</button>
+              <button class="banner__ button button" ><i class="fas fa-video"></i> Watch video</button>
           </div>
       </div>
-        <div class="banner-content__parallelogram-absolute">
+        <div class="banner__parallelogram_absolute">
         </div>
     </div>
-    <div class="data"></div>
+    <div class="banner__clock_background"></div>
     <div class="clock-container">
     <h4>Title Block</h4>
         <div class="clock">
-
             <div class="column days">
                 <div class="text">DAYS</div>
                 <div class="timer" id="days"></div>
             </div>
-            <div class="timer days"></div>
             <div class="column hours">
                 <div class="text">HOURS</div>
                 <div class="timer" id="hours"></div>
             </div>
-            <div class="timer"></div>
             <div class="column minutes">
                 <div class="text">MINUTES</div>
                 <div class="timer" id="minutes"></div>
             </div>
-            <div class="timer"></div>
             <div class="column seconds">
                 <div class="text">SECONDS</div>
                 <div class="timer" id="seconds"></div>
@@ -73,18 +69,18 @@
             </div>
         </div>
     </div>
-    <div class="element_blue"></div>
+    <div class="banner__element_blue"></div>
 </section>
 
                                     <!--Слайдер-->
 
 <section class="block-reviews">
     <div class="block-reviews__element_grey"></div>
-    <div class="single-item">
+    <div class="block-reviews_single-item">
         <div class="block-reviews__slider">
             <img src="img/slider.png" alt="slide"/>
                 <div class="block-reviews__slider__content">
-                    <div class="block-reviews__slider__content__container element1">
+                    <div class="block-reviews__slider__content__container_top">
                         <div class="block-reviews__slider__content__img">
                             <img src="img/Shape.png" alt="shape"/>
                         </div>
@@ -92,9 +88,9 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                                 nisi ut aliquip ex ea commodo consequat.</p>
-                            <div class="block-reviews__slider__content__container element2">
+                            <div class="block-reviews__slider__content__container_bottom">
                                 <div class="block-reviews__slider__content__img">
-                                    <img src="img/logo_dark.svg" alt="logo"/>
+                                    <img src="img/logo_dark.png" alt="logo"/>
                                 </div>
                                 <div class="block-reviews__slider__content__text">
                                     <p>Roy Rivera</p>
@@ -108,7 +104,7 @@
         <div class="block-reviews__slider ">
             <img src="img/slider.png" alt="slide"/>
             <div class="block-reviews__slider__content">
-                <div class="block-reviews__slider__content__container element1">
+                <div class="block-reviews__slider__content__container_top">
                     <div class="block-reviews__slider__content__img">
                         <img src="img/Shape.png" alt="shape"/>
                     </div>
@@ -116,9 +112,9 @@
                         <p>Je obecně známou věcí, že člověk bývá při zkoumání grafického návrhu rozptylován okolním
                             textem, pokud mu dává nějaký smysl.Úkolem Lorem Ipsum je pak nahradit klasický smysluplný
                             text vhodnou bezvýznamovou alternativou s relativně běžným rozložením slov.</p>
-                        <div class="block-reviews__slider__content__container element2">
+                        <div class="block-reviews__slider__content__container_bottom">
                             <div class="block-reviews__slider__content__img">
-                                <img src="img/logo_dark.svg" alt="logo"/>
+                                <img src="img/logo_dark.png" alt="logo"/>
                             </div>
                             <div class="block-reviews__slider__content__text">
                                 <p>Roy Rivera</p>
@@ -132,7 +128,7 @@
         <div class="block-reviews__slider ">
             <img src="img/slider.png" alt="slide"/>
             <div class="block-reviews__slider__content">
-                <div class="block-reviews__slider__content__container element1">
+                <div class="block-reviews__slider__content__container_top">
                     <div class="block-reviews__slider__content__img">
                         <img src="img/Shape.png" alt="shape"/>
                     </div>
@@ -140,9 +136,9 @@
                         <p>Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει,
                             όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem Ipsum είναι ότι έχει
                             λίγο-πολύ μία ομαλή κατανομή γραμμάτων, αντίθετα με το να .</p>
-                        <div class="block-reviews__slider__content__container element2">
+                        <div class="block-reviews__slider__content__container_bottom">
                             <div class="block-reviews__slider__content__img">
-                                <img src="img/logo_dark.svg" alt="logo"/>
+                                <img src="img/logo_dark.png" alt="logo"/>
                             </div>
                             <div class="block-reviews__slider__content__text">
                                 <p>Roy Rivera</p>
@@ -154,30 +150,32 @@
             </div>
         </div>
     </div>
-    <div class="slider-arrow__container">
-    <div class="slider-arrow_right"></div>
-    <div class="slider-arrow_text">
-        <p class="first">1</p>
-        <p class="of">OF</p>
-        <p class="last">3</p>
-    </div>
-    <div class="slider-arrow_left"></div>
+    <div class="block-reviews__slider-arrow__container">
+        <div class="slider-arrow_right"></div>
+                <div class="slider-arrow__text__container">
+                    <p class="slider-arrow__text">1</p>
+                    <p class="slider-arrow__text">OF</p>
+                    <p class="slider-arrow__text">3</p>
+                </div>
+        <div class="slider-arrow_left"></div>
     </div>
 </section>
 
-<section class="block-list">
-    <div class="block-list__text">
+
+
+<section class="block-timeline">
+    <div class="block-timeline__text_top">
     <p>ROADMAP</p>
-        <div class="block-list__text_absolute">
+        <div class="block-timeline__text_absolute">
             <h3>Party Jokes Startling But Unnecessary</h3>
         </div>
-        <div class="block-list__parallelogram_absolute">
+        <div class="block-timeline__parallelogram_absolute">
         </div>
     </div>
-    <div class="block-list__container">
-        <div class="timeline">
-            <div class="container left first_dot">
-                <div class="content left_line first">
+    <div class="block-timeline__container">
+        <div class="block-timeline__timeline">
+            <div class="block-timeline__timeline__container_left  ">
+                <div class="block-timeline__timeline__content_left content ">
                     <p>S1 2018</p>
                     <ul>
                         <li>  Lorem ipsum dolor sit amet</li>
@@ -187,8 +185,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="container right second_dot">
-                <div class="content right_line second">
+            <div class="block-timeline__timeline__container_right  ">
+                <div class="block-timeline__timeline__content_right content ">
                     <p>S2 2018</p>
                     <ul>
                         <li>Consectetur adipiscing elit</li>
@@ -197,8 +195,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="container left">
-                <div class="content left_line third">
+            <div class="block-timeline__timeline__container_left  ">
+                <div class="block-timeline__timeline__content_left content ">
                     <p>S3 2018</p>
                     <ul>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
@@ -207,8 +205,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="container right">
-                <div class="content right_line fourth">
+            <div class="block-timeline__timeline__container_right  ">
+                <div class="block-timeline__timeline__content_right content ">
                     <p>S1 2019</p>
                     <ul>
                         <li> Lorem ipsum dolor sit amet</li>
@@ -218,8 +216,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="container left">
-                <div class="content left_line fifth">
+            <div class="block-timeline__timeline__container_left  ">
+                <div class="block-timeline__timeline__content_left content ">
                     <p>S2 2019</p>
                     <ul>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
@@ -228,8 +226,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="container right">
-                <div class="content right_line sixth">
+            <div class="block-timeline__timeline__container_right  ">
+                <div class="block-timeline__timeline__content_right content ">
                     <p>S3 2019</p>
                     <ul>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -240,8 +238,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="container left">
-                <div class="content left_line seventh">
+            <div class="block-timeline__timeline__container_left  ">
+                <div class="block-timeline__timeline__content_left content ">
                     <p>S2 2019</p>
                     <ul>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
@@ -249,8 +247,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="container center ">
-                <div class="content center_line">
+            <div class="block-timeline__timeline__container_center">
+                <div class="block-timeline__timeline__content_center content">
                         <img src="img/logo_light.png" alt="logo"/>
                     <p>2020</p>
                     <ul>
@@ -265,27 +263,27 @@
     </div>
 </section>
 <section class="block-links">
-    <div class="block-links-logo">
-       <a href="https://s-pro.io/"> <img src="img/logo_links.svg" alt="logo"></a>
+    <div class="block-links__logo">
+       <a  class="block-links__logo-link" href="https://s-pro.io/"> <img src="img/logo_links.svg" alt="logo"></a>
     </div>
-    <ul>
-        <li><a href="#"> <i class="fab fa-telegram-plane"></i></a></li>
-        <li><a href="#"> <i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"> <i class="fab fa-linkedin-in"></i></a></li>
-        <li><a href="#"> <i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"> <i class="fab fa-medium-m"></i></a></li>
-        <li><a href="#"> <i class="fab fa-reddit-alien"></i></a></li>
-        <li><a href="#"> <i class="fab fa-btc"></i></a></li>
-        <li><a href="#"> <i class="fab fa-github"></i></a></li>
+    <ul class="block-links__list-items">
+        <li class="block-links__item"><a href="#"> <i class="fab fa-telegram-plane"></i></a></li>
+        <li class="block-links__item"><a href="#"> <i class="fab fa-twitter"></i></a></li>
+        <li class="block-links__item"><a href="#"> <i class="fab fa-linkedin-in"></i></a></li>
+        <li class="block-links__item"><a href="#"> <i class="fab fa-facebook-f"></i></a></li>
+        <li class="block-links__item"><a href="#"> <i class="fab fa-medium-m"></i></a></li>
+        <li class="block-links__item"><a href="#"> <i class="fab fa-reddit-alien"></i></a></li>
+        <li class="block-links__item"><a href="#"> <i class="fab fa-btc"></i></a></li>
+        <li class="block-links__item"><a href="#"> <i class="fab fa-github"></i></a></li>
     </ul>
 </section>
 <footer class="footer">
-    <div class="footer_links">
-        <p><a  href="#"> Privacy Policy</a></p>
-        <p><a href="#"> Terms & Conditions</a></p>
-        <p><a href="#"> Tokensale Agreement</a></p>
+    <div class="footer__links__container">
+        <p class="footer__links"><a  href="#"> Privacy Policy</a></p>
+        <p class="footer__links"><a href="#"> Terms & Conditions</a></p>
+        <p class="footer__links"><a href="#"> Tokensale Agreement</a></p>
     </div>
-    <p>© 2018 S-PRO - All rights reserved</p>
+    <p class="footer__text">© 2018 S-PRO - All rights reserved</p>
 
 </footer>
 
@@ -299,8 +297,8 @@
 
 
 <script  src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="downtime-timer-master/timer.js"></script>
-<script src="slick/slick.min.js"></script>
-<script src="script.js"></script>
+<script src="downtime/downtime-timer-master/timer.js"></script>
+<script src="downtime/libs/slick/slick.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

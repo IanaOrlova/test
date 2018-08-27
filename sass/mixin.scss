@@ -5,7 +5,6 @@
   font-weight: 700;
   letter-spacing: 1px;
   border-radius:6px ;
-  //padding: 19px 37px;
   text-transform: uppercase;
   background: transparent;
 }
@@ -30,33 +29,4 @@
   font-weight: 700;
 }
 
-@mixin flexbox {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@mixin space-between{
-justify-content: space-between;
--webkit-box-pack: justify;
--webkit-justify-content: space-between;
--ms-flex-pack: justify;
-}
-
-@mixin align-content{
-align-content: space-around;
--webkit-align-content: space-around;
--ms-flex-line-pack: distribute;
-}
-
-
-@mixin row{
-  -webkit-flex-direction: row-reverse;
-  -moz-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  -o-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
 

@@ -1,4 +1,3 @@
-@import "vb";
 @import "mixin";
 @import "normalize";
 
@@ -39,7 +38,57 @@ img{
 }
 /********************************навигация************************************************/
 
-.menu-button {
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0 2px;
+  margin: 0 123px;
+
+  &__section_right{
+    display: flex;
+
+    ul{
+      padding: 19px 93px 0;
+
+      li{
+        @include font-face_first;
+        color:  #2e3847;
+        font-size: 12px;
+        list-style: none;
+        display: inline;
+        text-transform: uppercase;
+        padding-left: 33px;
+
+        &:last-child{
+          padding-right: 0;
+        }
+
+      }
+
+    }
+
+    .button{
+      border: 2px solid #413281;
+      color: #413281;
+      padding: 20px 36px 19px 34px;
+
+      &:hover{
+        background: #413281;
+        color: white;
+      }
+
+    }
+
+  }
+
+  &__logo{
+    padding: 14px 0 0 5px;
+  }
+
+}
+
+.menu__button {
   display: none;
   width: 60px;
   padding: 7px 0;
@@ -49,71 +98,23 @@ img{
   font-size: 0;
   line-height: 0;
   cursor: pointer;
-}
 
-.menu-button span {
-  display: inline-block;
-  height: 1px;
-  background-color: #2998cc;
-  margin: 5px 0;
-  width: 80%;
-  font-size: 0;
-  line-height: 0;
-}
-
-
-.nav{
-  @include flexbox;
-  @include space-between;
-  padding: 18px 0 2px;
-  margin: 0 123px;
-
-
-  .nav__list--button{
-    @include flexbox;
-  }
-
-  .nav__logo{
-    padding: 14px 0 0 5px;
-  }
-
-  ul{
-    padding: 19px 93px 0;
-
-    li{
-      @include font-face_first;
-      color:  #2e3847;
-      font-size: 12px;
-      list-style: none;
-      display: inline;
-      text-transform: uppercase;
-      padding-left: 33px;
-
-      &:last-child{
-        padding-right: 0;
-      }
-
-    }
-
-  }
-
-  .button{
-    border: 2px solid #413281;
-    color: #413281;
-    padding: 20px 36px 19px 34px;
-
-    &:hover{
-      background: #413281;
-      color: white;
-    }
-
+  span {
+    display: inline-block;
+    height: 1px;
+    background-color: #2998cc;
+    margin: 5px 0;
+    width: 80%;
+    font-size: 0;
+    line-height: 0;
   }
 
 }
 /******************************************фон первой страницы************************************/
+
 .banner {
 
-  .banner-img {
+  &_background {
     background-image: url("../img/bg.jpg") ;
     background-size: cover;
     position: relative;
@@ -185,57 +186,55 @@ img{
       text-align: right
     }
 
-  .clock{
-    @include flexbox;
-    font-size: 24px;
+      .clock{
+        display: flex;
+        font-size: 24px;
+
+        .column {
+          padding-left: 38px;
+
+          .text {
+            font-size: 11px;
+            text-align: center;
+            padding-top: 27px;
+          }
+
+          .timer {
+            text-align: center;
+            font-size: 48px;
+            padding-top: 4px;
+          }
+        }
+          .hours {
+            color: #d4eaf5;
+          }
+
+          .minutes {
+            color: #a9d6eb;
+          }
+
+          .seconds {
+            color: #7fc1e0;
+          }
 
 
-    .column{
-      padding-left: 38px;
-    }
-
-    .text{
-      font-size: 11px;
-      text-align: center;
-      padding-top: 27px;
-    }
-
-    .timer{
-      text-align: center;
-      font-size: 48px;
-      padding-top: 4px;
-    }
-
-    .hours{
-      color: #d4eaf5;
-    }
-
-    .minutes{
-      color: #a9d6eb;
-    }
-
-    .seconds{
-      color: #7fc1e0;
-    }
+      }
 
   }
 
-}
-
-.data {
-  position: absolute;
-  right: 0;
-  top: 435px;
-  padding-left: 169px;
-  padding-right: 123px;
-  border-bottom: 209px solid #2998cc;
-  border-left: 192px solid transparent;
-  border-right: 141px solid #2998cc;
-}
-
+  &__clock_background {
+    position: absolute;
+    right: 0;
+    top: 435px;
+    padding-left: 169px;
+    padding-right: 123px;
+    border-bottom: 209px solid #2998cc;
+    border-left: 192px solid transparent;
+    border-right: 141px solid #2998cc;
+  }
 
 /*************************************голубой элемент в верхнем левом углу*******************/
-  .element_blue{
+  &__element_blue{
     position: absolute;
     top: 0;
     height: 0;
@@ -254,7 +253,7 @@ img{
   margin-top: 48px;
   display: block;
 
-  .block-reviews__element_grey{
+  &__element_grey{
     position: absolute;
     top:-2px;
     right: 0;
@@ -263,92 +262,98 @@ img{
     border-left: 392px solid transparent;
   }
 
-  .single-item{
+  &_single-item{
     max-width: 91%;
     position: relative;
-  }
-
-  .block-reviews__slider{
-    position: relative;
-    //padding-top: 29px;
-
-    img{
-      width: 100%;
-    }
-
-  }
-
-  .block-reviews__slider__content{
-    position: absolute;
-    top: 67px;
-    left: 17.6%;
-    color: white;
-  }
-
-  .block-reviews__slider__content__container.element1{
-    @include flexbox;
-    justify-content: center;
-    max-width: 722px;
 
 
+    .block-reviews__slider{
+      position: relative;
 
-    .block-reviews__slider__content__text{
-      max-width: 612px;
-      padding-left: 52px;
-
-      p{
-        color:  white;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: left;
+      img{
+        width: 100%;
       }
 
     }
 
-  }
+    .block-reviews__slider__content{
+      position: absolute;
+      top: 67px;
+      left: 17.6%;
+      color: white;
 
-  .block-reviews__slider__content__container.element2 {
-    @include flexbox;
-    padding-top: 40px;
+      &__container_top{
+        display: flex;
+        justify-content: center;
+        max-width: 722px;
 
-    .block-reviews__slider__content__text {
-      max-width: 161px;
-      padding-left: 31px;
-      padding-top: 7px;
+        .block-reviews__slider__content__text{
+          max-width: 612px;
+          padding-left: 52px;
 
-      p{
-        color:  white;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 22px;
-        text-align: left;
+          p{
+            color:  white;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+          }
 
-        &:last-child{
-          color:  rgba(255, 255, 255, 0.5);
         }
 
       }
 
-    }
+      &__container_bottom {
+        display: flex;
+        padding-top: 40px;
 
-      .block-reviews__slider__content__img {
-        max-width: 72px;
+        .block-reviews__slider__content__text {
+          max-width: 161px;
+          padding-left: 31px;
+          padding-top: 7px;
+
+          p{
+            color:  white;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            text-align: left;
+
+            &:last-child{
+              color:  rgba(255, 255, 255, 0.5);
+            }
+
+          }
+
+        }
+
+        .block-reviews__slider__content__img {
+          max-width: 72px;
+        }
+
       }
-
+    }
   }
 
-  .slider-arrow__container{
-    @include flexbox;
-    @include row;
+  .block-reviews__slider-arrow__container{
+    display: flex;
+    flex-direction: row-reverse;
     position: absolute;
     z-index: 1;
     bottom: 0;
     right: 10.6%;
     padding-left: 15px;
 
-    .slider-arrow_text{
-      @include flexbox;
+    .slider-arrow__text__container{
+      display: flex;
+      color: white;
+      padding: 20px 24px 0 20px;
+
+      p{
+        padding-right: 3px;
+        font-size: 12px;
+        color: rgb(255,255,255);
+      }
     }
 
     .slider-arrow_right{
@@ -367,21 +372,9 @@ img{
 
   }
 
-  .slider-arrow_text{
-    color: white;
-    padding: 20px 24px 0 20px;
-
-    p{
-      padding-right: 3px;
-      font-size: 12px;
-      color: rgb(255,255,255);
-    }
-
-  }
-
 }
 
-.arrow_right{
+.img__arrow_right{
   padding: 20px;
   position: absolute;
   z-index: 2;
@@ -389,7 +382,7 @@ img{
   right: 30px;
 }
 
-.arrow_left{
+.img__arrow_left{
   padding: 20px;
   position: absolute;
   z-index: 2;
@@ -398,67 +391,65 @@ img{
 }
 /********************************************список*********************************/
 
-.block-list {
+.block-timeline {
   @include font-face_first;
   text-align: center;
   position: relative;
   border-bottom: 1px solid #ebedf1;
-  //padding-top: 10px;
 
-  .block-list__text {
+  &__text_top {
     position: relative;
     max-width: 760px;
     margin: 0 auto;
-  }
 
-  p {
-    color: #f2f3f5;
-    font-size: 144px;
-    letter-spacing: 7px;
-    margin: 0;
-  }
+    p {
+      color: #f2f3f5;
+      font-size: 144px;
+      letter-spacing: 7px;
+      margin: 0;
+    }
 
-  .block-list__text_absolute {
-    position: absolute;
-    top: 56px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    margin: 0 auto;
-    max-width: 516px;
-    letter-spacing: 1px;
+    .block-timeline__text_absolute {
+      position: absolute;
+      top: 56px;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      margin: 0 auto;
+      max-width: 516px;
+      letter-spacing: 1px;
 
-    h3 {
-      color: #000221;
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 40px;
-      text-transform: uppercase;
+      h3 {
+        color: #000221;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        text-transform: uppercase;
+
+      }
 
     }
 
+    .block-timeline__parallelogram_absolute {
+      position: absolute;
+      top: 60px;
+      left: 115px;
+      z-index: 1;
+      width: 86px;
+      height: 40px;
+      background-color: #2998cc;
+      transform: skewX(139deg);
+    }
   }
 
-  .block-list__parallelogram_absolute {
-    position: absolute;
-    top: 60px;
-    left: 115px;
-    z-index: 1;
-    width: 86px;
-    height: 40px;
-    background-color: #2998cc;
-    transform: skewX(139deg);
-  }
-
-  .block-list__container {
+  &__container {
     padding: 10px 0 61px;;
     max-width: 1030px;
     margin: 0 auto 0;
 
-    .container {
+    .block-timeline__timeline {
       position: relative;
-      background-color: inherit;
-      width: 50%;
+      margin: 0 auto;
 
       .content {
         padding-bottom: 12px;
@@ -484,246 +475,165 @@ img{
 
       }
 
-      .first {
-        padding: 0 0 11px;
-      }
-      .fourth{
-        padding-top: 5px;
-      }
+      &__container_left {
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+        left: 0;
 
-    }
+        &::after {
+          @include circle;
+          right: -7px;
+          top: 9px;
+        }
 
-    .content.center_line {
+        &:hover:after {
+          background-color: #2998cc;
+        }
 
-      li {
-        padding-left: 15px;
+        .block-timeline__timeline__content_left {
 
+          ul {
+            padding-left: 77px;
+            padding-right: 45px;
+            padding-bottom: 7px;
+            border-right: 2px dashed #dde3eb;
 
-      }
+            li {
+              padding-left: 7px;
+            }
 
-      img {
-        margin: 0 196px 0 173px;
-      }
+          }
 
-      p {
-        text-align: right;
-        font-size: 24px;
-        color: #000221;
-        padding: 13px 23px 10px 0;
+          &:hover {
 
-      }
-    }
+            p {
+              color: #2998cc;
+            }
 
-    .left_line {
+          }
 
-      ul {
-        padding-left: 77px;
-        padding-right: 45px;
-        padding-bottom: 7px;
-        border-right: 2px dashed #dde3eb;
+          p {
+            padding-top: 10px;
+            padding-left: 47px;
 
-        li {
-          padding-left: 7px;
+            &::after {
+              content: '';
+              position: absolute;
+              top: 16px;
+              left: 143px;
+              width: 68%;
+              height: 2px;
+              background-color: #dde3eb;
+            }
+          }
+
         }
 
       }
 
-      p {
-        padding-top: 10px;
-        padding-left: 47px;
+      &__container_right {
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+        left: 49.9%;
+
+        &::after {
+          @include circle;
+          left: -8px;
+          top: 0;
+        }
+
+        &:hover:after {
+          background-color: #2998cc;
+        }
+
+        .block-timeline__timeline__content_right {
+
+          ul {
+            padding-left: 132px;
+            border-left: 2px dashed #dde3eb;
+
+            li {
+              padding-left: 10px;
+              max-width: 623px;
+            }
+
+          }
+
+          &:hover {
+
+            p {
+              color: #2998cc;
+            }
+
+          }
+
+          p {
+            padding-left: 112px;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 12px;
+              left: 25px;
+              width: 12%;
+              height: 2px;
+              background-color: #dde3eb;
+            }
+
+          }
+
+        }
       }
 
+      &__container_center {
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+        left: 31%;
+        max-width: 245px;
+
+
+        .block-timeline__timeline__content_center {
+          padding-top: 4px;
+
+          p {
+            text-align: right;
+            font-size: 24px;
+            color: #000221;
+            padding: 13px 23px 10px 0;
+          }
+
+          li {
+            padding-left: 15px;
+
+          }
+
+          img {
+            margin: 0 196px 0 173px;
+          }
+
+        }
+
+      }
     }
-
-    .right_line {
-      ul{
-        padding-left: 132px;
-        border-left: 2px dashed #dde3eb;
-      }
-      li {
-        padding-left: 10px;
-        max-width: 623px;
-      }
-
-      p {
-        padding-left: 112px;
-      }
-
-    }
-  }
-
-  .left {
-    left: 0;
-  }
-
-  .right {
-    left: 49.9%;
-
-  }
-  .center {
-    left: 31%;
-    max-width: 245px;
-  }
-
-  /************************таймлайн********************************/
-
-  .timeline {
-    position: relative;
-    margin: 0 auto;
-  }
-
-  //.right > .content::before {
-  //  content: '';
-  //  position: absolute;
-  //  width: 2px;
-  //  background-color: #dde3eb;
-  //  top: 34px;
-  //  bottom: -1px;
-  //  right: 122%;
-  //}
-  //
-  //.left > .content::after {
-  //  content: '';
-  //  position: absolute;
-  //  width: 2px;
-  //  background-color: #dde3eb;
-  //  top: 51px;
-  //  bottom: -8px;
-  //  left: 118%;
-  //}
-
-  /******************************линия после даты********************************/
-
-  .right_line p::before {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 25px;
-    width: 12%;
-    height: 2px;
-    background-color: #dde3eb;
-  }
-
-  .second.right_line p::before {
-    top: 8px;
-  }
-
-  .left_line p::after {
-    content: '';
-    position: absolute;
-    top: 16px;
-    left: 143px;
-    width: 68%;
-    height: 2px;
-    background-color: #dde3eb;
-  }
-
-  .first.left_line p:after {
-    top: 17px;
-  }
-
-  /********************************************** круги на тайм линии ***********************/
-
-  .left::after {
-    @include circle;
-    right: -7px;
-    top: 9px;
-  }
-
-  .right::after {
-    @include circle;
-    left: -8px;
-    top: 0;
-  }
-
-  .first_dot::after {
-    right: -7px;
-    top: 10px;
-  }
-
-  .second_dot::after {
-    top: 0;
   }
 
   /****************************************************ховер***********************************/
 
-  .left:hover:after {
-    background-color: #2998cc;
-  }
 
-  .left > .content ul:hover {
+  .block-timeline__timeline__container_left > .content ul:hover{
     border-right: 2px solid #2998cc;
   }
 
-  .right:hover:after {
-    background-color: #2998cc;
-  }
 
-  .right > .content ul:hover {
+
+  .block-timeline__timeline__container_right > .content ul:hover {
     border-left: 2px solid #2998cc;
   }
 
-  .content.right_line:hover {
-
-    p{
-    color: #2998cc;
-    }
-
-  }
-
-  .content.left_line:hover {
-
-    p {
-      color: #2998cc;
-    }
-
-  }
-
 }
-
-  ///* Fix the circle for containers on the right side */
-  //.right::after {
-  //  left: -18px;
-  //}
-
-  /* The actual content */
-
-//
-//  /* Media queries - Responsive timeline on screens less than 600px wide */
-//  @media screen and (max-width: 600px) {
-//    /* Place the timelime to the left */
-//    .timeline::after {
-//      left: 31px;
-//    }
-//
-//    /* Full-width containers */
-//    .container {
-//      width: 100%;
-//      padding-left: 70px;
-//      padding-right: 25px;
-//    }
-//
-//    /* Make sure that all arrows are pointing leftwards */
-//    .container::before {
-//      left: 60px;
-//      border: medium solid white;
-//      border-width: 10px 10px 10px 0;
-//      border-color: transparent white transparent transparent;
-//    }
-//
-//    /* Make sure all circles are at the same spot */
-//    .left::after, .right::after {
-//      left: 15px;
-//    }
-//
-//    /* Make all right containers behave like the left ones */
-//    .right {
-//      left: 0%;
-//    }
-//  }
-//}
-
-
 /***********************************соцсети**********************************************/
 
 .block-links{
@@ -731,7 +641,7 @@ img{
   padding: 30px 126px;
   text-align: center;
 
-  .block-links-logo{
+  &__logo{
     position: absolute;
     top: 32px;
   }
@@ -761,13 +671,13 @@ img{
   font-size: 12px;
   color:  rgba(0, 18, 51, 0.6);
   font-weight: 400;
-  @include flexbox;
-  @include space-between;
+  display: flex;
+  justify-content: space-between;
   background: #f7f8fa;
   padding: 37px 123px;
 
-  .footer_links{
-    @include flexbox;
+  &__links__container{
+    display: flex;
 
     p {
       padding-right: 23px;
@@ -786,53 +696,80 @@ img{
 /*************************************адаптив*****************************************/
 
 
-@media (max-width: 1250px) {
-
-  div.block-reviews__slider{
-
-    div.block-reviews__slider__content{
-      top: 30px;
-      left: 100px;
-
-    }
-
-  }
-
-  .block-reviews__element_grey{
-    display: none;
-  }
+@media (max-width: 1300px) {
 
   section.block-reviews{
     background: #01021b;
+
+    .block-reviews__slider{
+      background: #01021b;
+
+       .block-reviews__slider__content{
+          top: 30px;
+          left: 100px;
+
+        }
+
+    }
+
+    .block-reviews__element_grey{
+      display: none;
+    }
+
   }
-
-  div.block-reviews__slider{
-    background: #01021b;
-
-  }
-
 }
 
 @media (max-width: 1070px) {
 
-  .nav__list--button{
+  .nav {
+    position: relative;
+    display: flex;
+    margin: 0 ;
 
-    ul{
-      padding: 19px 40px 0 0;
+    ul {
+      display: none;
+      position: absolute;
+      z-index: 2;
+      top: 92px;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      padding: 0;
+      background-color: rgba(120, 173, 212, 0.72);
+    }
+
+    #top-menu li {
+      display: block;
+      margin: 15px 0;
+      padding: 0;
+
+      a{
+        color: white;
+        font-size: 16px;
+      }
+
+    }
+
+    .button{
+      margin-left: 40px;
+    }
+
+    .menu__button {
+      display: inline-block;
     }
 
   }
 
-    .timeline{
+    .block-timeline__timeline{
 
       .container{
         padding-bottom: 30px;
       }
 
-      .left {
+      .block-timeline__timeline__container_left {
         left:25%;
 
-        .left_line{
+        .block-timeline__timeline__content_left{
 
           ul{
             padding-left: 0;
@@ -841,20 +778,35 @@ img{
 
           P{
             padding-left: 0;
+            &::after{
+              content: none;
+            }
           }
 
         }
 
-        .left_line p::after{
-          content: none;
-        }
-
       }
 
-      .right {
+      .block-timeline__timeline__container_right {
         left: 25%;
 
-        .right_line{
+        &:after {
+          content: none;
+          left: 472px;
+          top: 0;
+        }
+
+        &:hover:before {
+          background-color: #2998cc;
+        }
+
+        &::before {
+          @include circle;
+          right: -8px;
+          top: 0;
+        }
+
+        .block-timeline__timeline__content_right{
 
           ul{
             padding-left: 0;
@@ -865,40 +817,26 @@ img{
 
           P{
             padding-left: 0;
+            &::before {
+              content: none;
+            }
           }
         }
 
-        .right_line p::before {
-          content: none;
-        }
+
 
       }
-      .right > .content ul:hover {
+      .block-timeline__timeline__container_right > .content ul:hover {
         border-right: 2px solid #2998cc;
         border-left: none;
       }
 
-      .right:hover:before {
-        background-color: #2998cc;
-      }
 
-      .right::after {
-        content: none;
-        left: 472px;
-        top: 0;
-      }
-
-      .right::before {
-        @include circle;
-        right: -8px;
-        top: 0;
-      }
-
-      .center {
+      .block-timeline__timeline__container_center {
         left: 25%;
         max-width: 245px;
 
-        .center_line{
+        .block-timeline__timeline__content_center{
 
           ul{
             padding-left: 0;
@@ -914,56 +852,6 @@ img{
 
 @media (max-width: 970px){
 
-  .block-reviews{
-    display: none;
-  }
-
-  .nav__list--button{
-    flex-direction: row-reverse;
-  }
-
-  .button{
-    margin-right: 40px;
-  }
-
-  .menu-button {
-    display: inline-block;
-  }
-
-  .nav {
-  position: relative;
-  display: flex;
-  margin: 0 ;
-  }
-
-  nav ul {
-  display: none;
-  position: absolute;
-  z-index: 2;
-  top: 92px;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  padding: 0;
-  background-color: rgba(120, 173, 212, 0.72);
- }
-
- #top-menu li {
-  display: block;
-  margin: 15px 0;
-  padding: 0;
-
-   a{
-     color: white;
-     font-size: 16px;
-   }
-
-  }
-
-  nav ul li span {
-  display: none;
-  }
-
   #text{
     padding: 198px 0 248px 77px;
   }
@@ -972,23 +860,34 @@ img{
     display: none;
   }
 
-  .element_blue{
+  .banner__element_blue{
     display: none;
   }
 
+  .block-reviews{
+    display: none;
+  }
 }
 
 @media all and (max-width: 750px){
 
-  .block-list__text{
+  #text{
+    padding: 198px 0 248px 10px;
+  }
+
+  .block-timeline__text_top{
 
     p{
       display: none;
     }
 
-    .block-list__text_absolute{
+    .block-timeline__text_absolute{
       position: static;
 
+    }
+
+    .block-timeline__parallelogram_absolute{
+      display: none;
     }
 
   }
@@ -997,20 +896,17 @@ img{
     padding-right: 40px ;
     padding-left: 40px;
 
-    .block-links-logo{
+    .block-links__logo{
       display: none;
     }
-  }
 
-  #text{
-    padding: 198px 0 248px 10px;
   }
 
   .footer{
     padding-right: 40px;
     padding-left: 40px;
 
-    .footer_links{
+    .footer__links__container{
       display: block;
 
       p{
@@ -1021,9 +917,7 @@ img{
 
   }
 
-  .block-list__parallelogram_absolute{
-    display: none;
-  }
+
 
 }
 
@@ -1037,7 +931,7 @@ img{
     margin-bottom: 20px;
   }
 
-  .data{
+  .banner__clock_background{
     display: none;
   }
 
@@ -1058,7 +952,7 @@ img{
 
   .block-links{
     i{
-      margin-top: 15px;
+      margin-top: 16px;
     }
   }
 }
