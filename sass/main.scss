@@ -104,22 +104,30 @@ img{
   display: none;
   width: 60px;
   padding: 7px 0;
-  border: 1px solid #2998cc;
-  border-radius: 5px;
+  border: none;
   background: transparent;
   font-size: 0;
   line-height: 0;
   cursor: pointer;
+  text-align: center;
+  outline: none;
 
   span {
     display: inline-block;
-    height: 1px;
     background-color: #2998cc;
-    margin: 5px 0;
+    height: 6px;
     width: 80%;
     font-size: 0;
     line-height: 0;
+    border-radius: 9px;
+    margin-top: 5px;
+    text-align: center;
+
   }
+
+
+
+
 
 }
 /******************************************фон первой страницы************************************/
@@ -701,9 +709,16 @@ position: relative;
 /*************************************адаптив*****************************************/
 
 
-@media (max-width: 1300px) {
+@media  (max-width: 1300px) {
+
+  .banner__parallelogram_absolute{
+    display: none;
+  }
+
   #text{
   padding: 15% 0 36% 12%;
+
+
   }
 
   section.block-reviews{
@@ -771,11 +786,9 @@ position: relative;
     }
 
   }
-
-  .banner__parallelogram_absolute{
+  .nav__element_blue{
     display: none;
   }
-
   .block-timeline__timeline{
 
     .container{
@@ -865,11 +878,15 @@ position: relative;
 
 }
 
-@media (max-width: 970px){
+@media all and (min-width: 1071px){
 
-  .nav__element_blue{
-    display: none;
+  .nav__list__items  {
+    display: block!important;
   }
+
+}
+
+@media (max-width: 970px){
 
   #text{
     padding: 25% 0 36% 7%;
@@ -880,6 +897,8 @@ position: relative;
     display: none;
   }
 }
+
+
 
 @media all and (max-width: 750px){
 
@@ -905,7 +924,7 @@ position: relative;
   }
 
   .block-links{
-    padding-right: 40px ;
+    padding-right: 41px ;
     padding-left: 40px;
 
     .block-links__logo{
