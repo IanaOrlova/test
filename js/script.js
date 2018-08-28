@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
     $('.block-reviews_single-item').slick({
-        prevArrow: '<a class="img__arrow_right"><img src="img/img__arrow_right.png"/></a>',
-        nextArrow: '<a class="img__arrow_left"><img  src="img/img__arrow_left.png"/></a>',
+        prevArrow: '<div class="img__arrow_right"><a><img src="img/img__arrow_right.png"/></a></div>',
+        nextArrow: '<div class="img__arrow_left"><a><img  src="img/img__arrow_left.png"/></a></div>',
     });
 
     $('.menu__button').click(function (e) {

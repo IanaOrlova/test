@@ -267,7 +267,7 @@ position: relative;
     position: absolute;
     top:-2px;
     right: 0;
-    z-index: 2;
+    z-index: 1;
     border-top: 391px solid #f7f8fa;
     border-left: 392px solid transparent;
   }
@@ -344,62 +344,58 @@ position: relative;
       }
     }
   }
+}
 
-  .block-reviews__slider-arrow__container{
+
+  .slider-arrow__text__container{
     display: flex;
-    flex-direction: row-reverse;
+    color: white;
+    padding: 20px 24px 0 20px;
     position: absolute;
-    z-index: 1;
-    bottom: 0;
-    right: 10.6%;
-    padding-left: 15px;
+    bottom: 15px;
 
-    .slider-arrow__text__container{
-      display: flex;
-      color: white;
-      padding: 20px 24px 0 20px;
-
-      p{
-        padding-right: 3px;
-        font-size: 12px;
-        color: rgb(255,255,255);
-      }
+    p{
+      padding-right: 3px;
+      font-size: 12px;
+      color: rgb(255,255,255);
     }
-
-    .slider-arrow_right{
-      width: 81px;
-      height: 49px;
-      background-color: #2998cc;
-      transform: skewX(46deg);
-    }
-
-    .slider-arrow_left{
-      width: 81px;
-      height: 49px;
-      background-color: #041132;
-      transform: skewX(46deg);
-    }
-
   }
 
-}
+
+
 
 .img__arrow_right{
   padding: 20px;
   position: absolute;
   z-index: 2;
-  bottom: -2px;
-  right: 30px;
+  bottom: 1px;
+  right: 25px;
   cursor: pointer;
+  width: 81px;
+  height: 49px;
+  background-color: #2998cc;
+  transform: skewX(46deg);
+  img{
+    transform: skewX(-46deg);
+    margin-left: 15px;
+  }
 }
 
 .img__arrow_left{
   padding: 20px;
   position: absolute;
   z-index: 2;
-  bottom: -2px;
-  right: 198px;
+  bottom: 1px;
+  right: 187px;
   cursor: pointer;
+  width: 81px;
+  height: 49px;
+  background-color: #041132;
+  transform: skewX(46deg);
+  img{
+    transform: skewX(-46deg);
+    margin-left: 8px;
+  }
 }
 /********************************************список*********************************/
 
