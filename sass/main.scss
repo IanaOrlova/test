@@ -346,23 +346,14 @@ position: relative;
   }
 }
 
-
-  .slider-arrow__text__container{
-    display: flex;
-    color: white;
-    padding: 20px 24px 0 20px;
-    position: absolute;
-    bottom: 15px;
-
-    p{
-      padding-right: 3px;
-      font-size: 12px;
-      color: rgb(255,255,255);
-    }
-  }
-
-
-
+.pagingInfo{
+  position: absolute;
+  z-index: 3;
+  bottom: 16px;
+  right: 18%;
+  color: white;
+  font-size: 16px;
+}
 
 .img__arrow_right{
   padding: 20px;
